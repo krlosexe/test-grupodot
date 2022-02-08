@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movistar</title>
+
+
+    <style>
+
+        :root {
+            --color-primary: #1CAADF
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+
+        .title_box{
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+        }
+        .title_long{
+            font-size: 3.5em;
+        }
+
+        .title_extra_long{
+            font-size: 4.5em;
+        }
+        .box{
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        .price{
+            text-align: center;
+            color: white;
+            font-size: 1.8em;
+        }
+
+
+        .p_small{
+            font-size: .9em;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            color: white;
+        }
+        .btn-primary {
+            background: var(--color-primary);
+            color:  white;
+            height: 26px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content : space-around;
+            width: 100%;
+            margin: 0 auto;
+            border-bottom: 2px solid #EAEAEA;
+        }
+
+        header #logo{
+            width: 200px;
+        }
+
+
+        header nav{
+            width: 60%;
+            align-items: center;
+            display: flex;
+        }
+
+        header nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content : space-between;
+            padding: 0;
+            align-content : center;
+            width: 100%;
+        }
+
+        header nav ul li{
+            list-style: none;
+        }
+
+        header nav ul li a{
+           color:  #909090;
+        }
+
+
+        header nav ul li.active a{
+           color:  #777;
+           font-weight: bold;
+        }
+
+
+
+        header #btn_movistar{
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+
+        
+
+        #banner #content-banner{
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+            clip-path: ellipse(69% 100% at 50.19% 0%);
+        }
+
+
+        #banner_photo{
+            width: 50%;
+            background-image: url("img_banner.png");
+            background-position: 100% 20%;
+        }
+        #banner_text{
+            width: 50%;
+
+            background-color: var(--color-primary)
+        }
+
+        #banner_text h1{
+            text-align: center;
+            margin-top: 10%;
+            font-size: 4em;
+            color : white
+        }
+
+
+        #banner_divider {
+            text-align: center;
+            font-size: 2em;
+            width: 65%;
+            margin: 0 auto;
+            color: #50535A;
+        }   
+
+        #banner_input{
+            position: absolute;
+            top: 50%;
+            left: 40%;
+        }
+
+        #banner_input #item_input{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #banner_input #item_input input{
+            border: none;
+            padding: 16px;
+            width: 223px;
+            font-size: 1.2em;
+        }
+
+
+        #banner_input #item_input button{
+           background: #909090;
+            border: none;
+            width: 235px;
+            font-size: 1.4em;
+            color: white;
+        }
+
+        #terms_conditions p{
+            display: inline-block;
+            color: white;
+        }
+
+        #start{
+            position: absolute;
+            top: 50%;
+            right: 10%;
+        }
+
+        #start img{
+            width: 175px
+        }
+
+        #plans{
+            display: flex;
+            flex-direction: row;
+            width: 85%;
+            margin: 0 auto;
+        }
+        
+
+        #current_plan{
+            width: 25%;
+            background: #86888C;
+            margin-right: 14px;
+        }
+
+        #new_plan{
+            width: 80%;
+            background: var(--color-primary);
+        }
+
+        #new_plan_content{
+            flex-direction: row;
+            display: flex;
+        }
+
+        #new_plan_info{
+             width: 30%;
+        }
+
+        #new_plan_items{
+            background: blue;
+            width: 70%;
+        }
+
+        
+       
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://selectra.mx/sites/selectra.mx/files/images/movistar-350x183.png" id="logo" alt="Movistar">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Productos y sercivios</a></li>
+                <li><a href="#">Informacion Importante para usuarios</a></li>
+                <li><a href="#">Pagos y Recargas</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" id="btn_movistar" class="btn-primary">Mi Movistar</a>
+    </header>
+
+
+    <section id="banner">
+        <div id="content-banner">
+            <div id="banner_photo"> </div>
+            <div id="banner_text">
+                <h1>¡Cámbiate a un plan con muchas más Gigas! </h1>
+            </div>
+        </div>
+
+
+        <div id="banner_input">
+            <div id="item_input">
+               
+                <input type="text" placeholder="Ingresa tu número móvil" required>
+                <button type="submit">Cambiarme ya</button>
+              
+            </div>
+
+           <div id="terms_conditions">
+                <input type="checkbox">
+                <p>Acepto términos y condiciones y autorizo el tratamiento de datos personales</p>
+           </div>
+        </div>
+
+
+        <div id="start">
+            <a href="http://grupodot.com" target="_blank">
+                <img src="nuevo_plan.png" alt="Nuevo plan">
+            </a>
+        </div>
+
+        <div id="banner_divider">
+            <p> Nuevo plan con muchas más Gigas en 4G/3G, minutos ilimitados 
+                a todo operador, video, música y servicios que hacen más fácil tu vida
+                </p>
+        </div>
+    </section>
+
+
+    <section id="plans">
+        <div id="current_plan" class="box">
+            <h3 class="title_box">TU PLAN ACTUAL</h3>
+            <h1 class="title_box title_long">4.5 GB</h1>
+            <p class="price">$80.900 /mes</p>
+        </div>
+        <div id="new_plan" class="box">
+            <h3 class="title_box">
+                TU NUEVO PLAN INCLUYE MÁS GIGAS Y MÁS BENEFICIOS: 
+            </h3>
+
+
+            <div id="new_plan_content">
+                <div id="new_plan_info">
+                    <h1 class="title_box title_extra_long">30 GB</h1>
+                    <p class="p_small">Al consumir tus 30 GB navegarás 
+                        a una velocidad de 256 kbps</p>
+                    <p class="price">$99.900 /mes</p>
+                </div>
+                <div id="new_plan_items">
+                    CUADROS
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
