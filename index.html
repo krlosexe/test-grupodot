@@ -17,7 +17,13 @@
             text-decoration: none;
         }
 
-
+        .text_left{
+            text-align: left !important;
+        }
+        .title_box_small{
+            font-size: 1.2em !important;
+            margin: 0;
+        }
         .title_box{
             font-size: 1.5em;
             color: white;
@@ -49,12 +55,31 @@
             margin: 0 auto;
             color: white;
         }
+
+
+        .flex_row{
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .item_card{
+            padding: 20px;
+            width: 400px;
+            height: 110px;
+            margin: 5px;
+            border-radius: 9px;
+            border: 1px solid white;
+        }
+
+
         .btn-primary {
             background: var(--color-primary);
             color:  white;
             height: 26px;
             padding: 10px;
             border-radius: 6px;
+           
         }
 
 
@@ -222,6 +247,16 @@
             width: 70%;
         }
 
+        #flags{
+            margin: 0 auto;
+        }
+
+        #img_player_lite{
+            width: 159px;
+            margin-bottom: 9px;
+        }
+
+        
         
        
     </style>
@@ -299,7 +334,26 @@
                     <p class="price">$99.900 /mes</p>
                 </div>
                 <div id="new_plan_items">
-                    CUADROS
+                    <div class="flex_row">
+                        <div class="item_card">
+                            <p class="title_box">Minutos ilimitados a Fijo o Móvil</p>
+                            <center>
+                                <img src="flag.png" alt="Flag" id="flags">
+                            </center>
+                        </div>
+                        <div class="item_card">
+                            ¡Upss! Seguro de pantalla
+                        </div>
+                    </div>
+                    <div  class="flex_row">
+                        <div class="item_card">
+                            <img src="play_lite.png" alt="player lite" id="img_player_lite">
+                            <p class="title_box title_box_small text_left">Lo mejor de lo que ves en TV, cine e Internet en una sola App</p>
+                        </div>
+                        <div class="item_card">
+                            Napster, la App de Movistar Música
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
