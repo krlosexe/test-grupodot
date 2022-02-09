@@ -188,6 +188,7 @@
             width: 50%;
             background-image: url("img_banner.png");
             background-position: 100% 20%;
+            background-repeat: no-repeat;
         }
         #banner_text{
             width: 50%;
@@ -216,7 +217,7 @@
         }
         #banner_input{
             position: absolute;
-            top: 75%;
+            top: 40%;
             left: 37%;
         }
 
@@ -249,7 +250,7 @@
 
         #start{
             position: absolute;
-            bottom: -80px;
+            bottom: 30%;
             right: 10%;
         }
 
@@ -343,6 +344,166 @@
             margin-top: 30px;
             margin-bottom: 20px;
         }
+
+
+
+        @media (max-width: 1220px) {
+           #banner_text h1{
+              font-size:3em;
+           }
+
+           #banner_input{
+               left: 32%;
+           }
+           #banner_photo {
+                width: 50%;
+                background-image: url(img_banner.png);
+                background-position: 70% 20%;
+            }
+        }
+
+        @media (max-width: 940px) {
+           #plans{
+               flex-direction: column;
+           }
+           #current_plan, #new_plan{
+               width: 100%;
+               margin-bottom: 10px;
+           }
+           #banner_photo {
+                width: 50%;
+                background-image: url(img_banner.png);
+                background-position: 50% 20%;
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+            #banner_text h1{
+              font-size: 2em;
+              margin-top: 10%;
+           }
+           #banner_photo {
+                background-size: 137%;
+           }
+        
+
+           #banner #content-banner {
+                height: 330px;
+           }
+
+
+           #banner #content-banner {
+                height: 330px;
+            }
+
+            #banner_input{
+                left: 16%;
+                top: 32%;
+            }
+
+            #start{
+                bottom: 60%;
+                right: 2%;
+            }
+
+            #start img{
+                width: 100px;
+            }
+
+        }
+
+        @media (max-width: 700px){
+            #new_plan_content{
+                flex-direction: column;
+            }
+
+            #new_plan_info{
+                width: 100%;
+            }
+
+            #new_plan_items{
+                width: 100%;
+            }
+
+            #banner_input{
+                position: relative;
+                margin-top: 5%;
+                left:0;
+            }
+
+            #banner_input input{
+                border: 1px solid #909090;
+            }
+
+            #item_input {
+                justify-content: center;
+            }
+
+            #terms_conditions{
+                color : #909090;
+                text-align: center;
+            }
+
+            #terms_conditions p{
+                color : #909090;
+            }
+
+            #start {
+                bottom: 56%;
+                right: 20%;
+            }
+
+            #banner_divider{
+                width: 90%;
+            }
+            
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                list-style: none;
+                margin-bottom: 2%;
+                margin-left: 17%;
+            }
+
+            header #btn_movistar{
+                text-align: center;
+            }
+
+
+        }
+
+        @media (max-width: 530px){
+            .flex_row{
+                flex-direction: column;
+            }
+            .item_card{
+                width: 86%;
+            }
+
+            #banner_photo {
+                background-size: 173% 103%;
+            }
+
+            #start {
+                bottom: 50%;
+                right: 20%;
+            }
+
+            #banner_text h1 {
+                font-size: 1.8em;
+            }
+
+        }
+
+
+
+
+
+
        
     </style>
 </head>
@@ -367,30 +528,29 @@
             <div id="banner_text">
                 <h1>¡Cámbiate a un plan con muchas más Gigas! </h1>
             </div>
-
-            <div id="banner_input">
-                <div id="item_input">
-                   
-                    <input type="text" placeholder="Ingresa tu número móvil" required>
-                    <button type="submit">Cambiarme ya</button>
-                  
-                </div>
-    
-               <div id="terms_conditions">
-                    <input type="checkbox">
-                    <p>Acepto términos y condiciones y autorizo el tratamiento de datos personales</p>
-               </div>
-            </div>
         </div>
-
-
-        
 
         <div id="start">
             <a href="http://grupodot.com" target="_blank">
                 <img src="nuevo_plan.png" alt="Nuevo plan">
             </a>
         </div>
+
+        <div id="banner_input">
+            <div id="item_input">
+               
+                <input type="text" placeholder="Ingresa tu número móvil" required>
+                <button type="submit">Cambiarme ya</button>
+              
+            </div>
+
+           <div id="terms_conditions">
+                <input type="checkbox">
+                <p>Acepto términos y condiciones y autorizo el tratamiento de datos personales</p>
+           </div>
+        </div>
+
+
         
     </section>
 
@@ -488,4 +648,8 @@
     </section>
     
 </body>
+
+<footer>
+    <script src="https://use.fontawesome.com/ab52162a4e.js"></script>
+</footer>
 </html>
