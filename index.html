@@ -9,6 +9,22 @@
 
     <style>
 
+        @font-face {
+            font-family: "TelefonicaWeb-Regular";
+            src: url("./fonts/");
+            src: url("./fonts/TelefonicaWeb-Regular.woff") format("woff"),
+            url("./fonts/TelefonicaWeb-Regular.svg#filename") format("svg");
+        }
+
+        @font-face {
+            font-family: "TelefonicaWeb-Light";
+            src: url("./fonts/");
+            src: url("./fonts/TelefonicaWeb-Light.woff") format("woff"),
+            url("./fonts/TelefonicaWeb-Light.svg#filename") format("svg");
+        }
+
+
+
         :root {
             --color-primary: #1CAADF
         }
@@ -20,6 +36,10 @@
         .text_left{
             text-align: left !important;
         }
+
+        .text_center{
+            text-align: center !important;
+        }
         .title_box_small{
             font-size: 1.2em !important;
             margin: 0;
@@ -28,7 +48,10 @@
             font-size: 1.5em;
             color: white;
             text-align: center;
+            margin: 0;
+            font-family: "TelefonicaWeb-Light";
         }
+
         .title_long{
             font-size: 3.5em;
         }
@@ -41,10 +64,15 @@
             padding: 10px;
         }
 
+        .flex{
+            display: flex;
+        }
+
         .price{
             text-align: center;
             color: white;
             font-size: 1.8em;
+            font-family: "TelefonicaWeb-Regular";
         }
 
 
@@ -54,6 +82,7 @@
             width: 80%;
             margin: 0 auto;
             color: white;
+            font-family: "TelefonicaWeb-Regular";
         }
 
 
@@ -62,6 +91,11 @@
             flex-direction: row;
         }
 
+        .flex_column_center{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .item_card{
             padding: 20px;
@@ -72,6 +106,9 @@
             border: 1px solid white;
         }
 
+        .justify_center{
+            justify-content: center;
+        }
 
         .btn-primary {
             background: var(--color-primary);
@@ -118,6 +155,7 @@
 
         header nav ul li a{
            color:  #909090;
+           font-family: "TelefonicaWeb-Regular";
         }
 
 
@@ -132,6 +170,7 @@
             display: flex;
             align-items: center;
             margin-top: 30px;
+            font-family: "TelefonicaWeb-Regular";
         }
 
 
@@ -152,8 +191,8 @@
         }
         #banner_text{
             width: 50%;
-
-            background-color: var(--color-primary)
+            background-color: var(--color-primary);
+            font-family: "TelefonicaWeb-Light";
         }
 
         #banner_text h1{
@@ -172,18 +211,21 @@
             color: #50535A;
         }   
 
+        #banner_divider p {
+            font-family: "TelefonicaWeb-Regular";
+        }
         #banner_input{
             position: absolute;
-            top: 50%;
-            left: 40%;
+            top: 75%;
+            left: 37%;
         }
 
-        #banner_input #item_input{
+        #item_input{
             display: flex;
             flex-direction: row;
         }
 
-        #banner_input #item_input input{
+        #item_input input{
             border: none;
             padding: 16px;
             width: 223px;
@@ -191,7 +233,7 @@
         }
 
 
-        #banner_input #item_input button{
+         #item_input button{
            background: #909090;
             border: none;
             width: 235px;
@@ -202,11 +244,12 @@
         #terms_conditions p{
             display: inline-block;
             color: white;
+            font-family: "TelefonicaWeb-Regular";
         }
 
         #start{
             position: absolute;
-            top: 50%;
+            bottom: -80px;
             right: 10%;
         }
 
@@ -226,6 +269,9 @@
             width: 25%;
             background: #86888C;
             margin-right: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         #new_plan{
@@ -240,24 +286,63 @@
 
         #new_plan_info{
              width: 30%;
+             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #new_plan_info div{
+            margin-top: 51px;
         }
 
         #new_plan_items{
-            background: blue;
             width: 70%;
         }
 
         #flags{
-            margin: 0 auto;
+            margin: 10px auto 0;
         }
 
         #img_player_lite{
             width: 159px;
             margin-bottom: 9px;
+            align-self: center;
         }
 
         
+        #upsss{
+            width: 60px;
+            height: 80px;
+            margin-right: 10px;
+        }
+
         
+        #napster{
+            align-self: center;
+            margin-right: 20px;
+        }
+
+        #input_section{
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        #input_section input{
+            border: 1px solid #909090;
+        }
+
+        #input_section p{
+            color: #909090;;
+        }
+
+        #current_plan h3{
+            margin-top: 30px;
+        }
+
+        #new_plan #title_new_plan{
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
        
     </style>
 </head>
@@ -282,81 +367,124 @@
             <div id="banner_text">
                 <h1>¡Cámbiate a un plan con muchas más Gigas! </h1>
             </div>
-        </div>
 
-
-        <div id="banner_input">
-            <div id="item_input">
-               
-                <input type="text" placeholder="Ingresa tu número móvil" required>
-                <button type="submit">Cambiarme ya</button>
-              
+            <div id="banner_input">
+                <div id="item_input">
+                   
+                    <input type="text" placeholder="Ingresa tu número móvil" required>
+                    <button type="submit">Cambiarme ya</button>
+                  
+                </div>
+    
+               <div id="terms_conditions">
+                    <input type="checkbox">
+                    <p>Acepto términos y condiciones y autorizo el tratamiento de datos personales</p>
+               </div>
             </div>
-
-           <div id="terms_conditions">
-                <input type="checkbox">
-                <p>Acepto términos y condiciones y autorizo el tratamiento de datos personales</p>
-           </div>
         </div>
 
+
+        
 
         <div id="start">
             <a href="http://grupodot.com" target="_blank">
                 <img src="nuevo_plan.png" alt="Nuevo plan">
             </a>
         </div>
+        
+    </section>
 
-        <div id="banner_divider">
-            <p> Nuevo plan con muchas más Gigas en 4G/3G, minutos ilimitados 
-                a todo operador, video, música y servicios que hacen más fácil tu vida
-                </p>
-        </div>
+    <section id="banner_divider">
+        <p> Nuevo plan con muchas más Gigas en 4G/3G, minutos ilimitados 
+            a todo operador, video, música y servicios que hacen más fácil tu vida
+            </p>
     </section>
 
 
     <section id="plans">
         <div id="current_plan" class="box">
-            <h3 class="title_box">TU PLAN ACTUAL</h3>
-            <h1 class="title_box title_long">4.5 GB</h1>
-            <p class="price">$80.900 /mes</p>
+            <div>
+                <h3 class="title_box">TU PLAN ACTUAL</h3>
+            </div>
+            <div>
+                <h1 class="title_box title_long">4.5 GB</h1>
+            </div>
+            
+            <div>
+                <p class="price">$80.900 /mes</p>
+            </div>
         </div>
         <div id="new_plan" class="box">
-            <h3 class="title_box">
+            <h3 class="title_box" id="title_new_plan">
                 TU NUEVO PLAN INCLUYE MÁS GIGAS Y MÁS BENEFICIOS: 
             </h3>
 
 
             <div id="new_plan_content">
                 <div id="new_plan_info">
-                    <h1 class="title_box title_extra_long">30 GB</h1>
-                    <p class="p_small">Al consumir tus 30 GB navegarás 
+                    <div>
+                        <h1 class="title_box title_extra_long">30 GB</h1>
+                         <p class="p_small">Al consumir tus 30 GB navegarás 
                         a una velocidad de 256 kbps</p>
+                    </div>
                     <p class="price">$99.900 /mes</p>
                 </div>
                 <div id="new_plan_items">
                     <div class="flex_row">
-                        <div class="item_card">
+                        <div class="item_card flex_column_center">
                             <p class="title_box">Minutos ilimitados a Fijo o Móvil</p>
                             <center>
                                 <img src="flag.png" alt="Flag" id="flags">
                             </center>
                         </div>
-                        <div class="item_card">
-                            ¡Upss! Seguro de pantalla
+                        <div class="item_card flex_column_center">
+                            <div class="flex"> 
+                                <img src="upss.png" alt="upss" id="upsss">
+                                <p class="title_box text_left">
+                                    ¡Upss!<br> Seguro de pantalla
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div  class="flex_row">
-                        <div class="item_card">
+                        <div class="item_card flex_column_center">
                             <img src="play_lite.png" alt="player lite" id="img_player_lite">
-                            <p class="title_box title_box_small text_left">Lo mejor de lo que ves en TV, cine e Internet en una sola App</p>
+                            <p class="title_box title_box_small">Lo mejor de lo que ves en TV, cine e Internet en una sola App</p>
                         </div>
-                        <div class="item_card">
-                            Napster, la App de Movistar Música
+                        <div class="item_card flex_column_center">
+                            
+                            <div class="flex"> 
+                                <div class="flex">
+                                    <img src="Napster.png" alt="upss" id="napster" width="40" height="40" >
+                                </div>
+                                <p class="title_box text_left">
+                                    Napster, la App de Movistar Música
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <section>
+       
+        <div id="input_section">
+            <div>
+                <div id="item_input" class="justify_center">
+                    <input type="text" placeholder="Ingresa tu número móvil" required>
+                    <button type="submit">Cambiarme ya</button>
+                </div>
+                <div id="terms_conditions" >
+                    <input type="checkbox">
+                    <p>Acepto términos y condiciones y autorizo el tratamiento de datos personales</p>
+                </div>
+            </div>
+        </div>
+        
     </section>
     
 </body>
